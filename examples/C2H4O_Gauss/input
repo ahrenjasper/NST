@@ -1,14 +1,14 @@
-C2H4O m062x/dz S0/T0
-7 -153.6288736
-O 15.9949      1.140494420833375    -0.280674562604505    -0.034835946592096
+C2H4O m062x/dz S0/T0    ! header, not used
+7 -153.6288736          ! number of atoms, zero of energy in Hartrees
+O 15.9949      1.140494420833375    -0.280674562604505    -0.034835946592096  ! atom symbol, mass in amu; coords in Ang
 C 12.0000      0.020624135447152     0.503088095375588     0.035030638055883
 C 12.0000     -1.265276715371149    -0.242197552521405    -0.018073232163525
 H 1.007825     0.057467001267133     1.332071729395067    -0.702477480127337
 H 1.007825     0.142204307870437     1.029502775942943     1.020002581489454
 H 1.007825    -1.293043764132468    -1.265522467200460     0.355766721259008
 H 1.007825    -2.187220160488727     0.252073923366285    -0.322329491425112
-T
-100. 50000.
-6 300
-29. 1.
+T                       ! T = calculate Hessians and write nej.dat and ne.dat; F = don't, just optimize the MSX
+100. 50000.             ! Energy grid spacing , maximum grid energy in cm-1
+6 300                   ! Angular momentum grid spacing, maximum grid angular momentum in hbar
+29. 3.                  ! Spin-orbit coupling in cm-1, and scaling factor for the state counts in ne_*.dat and nej_*.dat
 

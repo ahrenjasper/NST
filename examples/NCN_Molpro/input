@@ -1,10 +1,10 @@
-NCN MP2/DZ
-3 -147.0596823175656
-N 14.003074   -0.1163628      -0.1163628        1.0549770    
+NCN MP2/DZ                ! header, not used
+3 -147.0596823175656      ! number of atoms, zero of energy in Hartrees
+N 14.003074   -0.1163628      -0.1163628        1.0549770    ! atom symbol, mass in amu; coords in Ang
 C 12.000000    0.3327257       0.3327257        0.0000000
 N 14.003074   -0.1163628      -0.1163628       -1.0549770    
-T
-100. 50000.
-6 300
-20. 1.
+T                       ! T = calculate Hessians and write nej.dat and ne.dat; F = don't, just optimize the MSX
+100. 50000.             ! Energy grid spacing , maximum grid energy in cm-1
+6 300                   ! Angular momentum grid spacing, maximum grid angular momentum in hbar
+20. 3.                  ! Spin-orbit coupling in cm-1, and scaling factor for the state counts in ne_*.dat and nej_*.dat
 
