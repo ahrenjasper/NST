@@ -15,7 +15,7 @@ c     Variables for Job Control
       logical :: barbor=.true.  ! Turn on Barzilai-Borwein step-size control by default
       integer :: qcprog=1       ! Gaussian as default program package
       integer nargs
-      character*4,allocatable::args(:)
+c      character*4,allocatable::args(:)
 
 c     Molecule Variables
       integer nclu
@@ -31,10 +31,7 @@ c     Variables read from input file
       double precision hso12
       double precision sc_qelec
       logical idebug
-
-c     Variables Needed for msxfreq
-      integer :: n1 = 1 
-      integer :: n2 = 2
+      logical icut
 
 c     Loop Variables      
       integer i,j
@@ -111,6 +108,9 @@ c     get scale factor for elec part'n fxn
 c     get logical variable for setting debugging
       read(5,*)
       read(5,*) idebug
+c     get logical variable for normal mode cuts 
+      read(5,*)
+      read(5,*) icut
 
 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
@@ -128,7 +128,7 @@ c     Calls Appropriate Subroutine based on Job Type
         write(6,*) "Request to rotate geometry to principal axes"
         write(6,*) 
         write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,n1,n2,jobtype,idebug,
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
 
@@ -136,7 +136,7 @@ c     Calls Appropriate Subroutine based on Job Type
         write(6,*) "Request to read Hessians for frequency calc"
         write(6,*) 
         write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,n1,n2,jobtype,idebug,
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
       
@@ -144,7 +144,7 @@ c     Calls Appropriate Subroutine based on Job Type
         write(6,*) "Request to calc Hessians for frequency calc"
         write(6,*) 
         write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,n1,n2,jobtype,idebug, 
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
 

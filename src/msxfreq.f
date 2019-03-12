@@ -1,14 +1,14 @@
-      subroutine msxfreq(xx0,mm,nclu,symb,el_zero,n1,n2,jobtype,idebug,
+      subroutine msxfreq(xx0,mm,nclu,symb,el_zero,jobtype,idebug,icut,
      &                    es,emax,js,jmax,hso12,sc_qelec)
 
       implicit none
 
 c     Passed into the subroutine
       double precision xx0(3,nclu),mm(nclu)
-      integer nclu,n1,n2
+      integer nclu
       character*2 symb(nclu)
       character*5 jobtype
-      logical idebug 
+      logical idebug,icut
 
 c     from input file
       double precision el_zero
@@ -37,6 +37,10 @@ c     Grid and surf parameters
       parameter(mgrid=100000)
       integer nsurf
       integer mnclu
+
+c     Variables Needed for msxfreq
+      integer :: n1 = 1
+      integer :: n2 = 2
 
 c     Values initialized to Zero
       double precision :: ezero = 0.0
@@ -120,23 +124,11 @@ c     Initialize certain variables as necessary
       mtot=mtot+mm(i)
       enddo
       
-c       print *, jobtype
-c       
-c       do j=1,nclu
-c         print *, xx0(:,j)
-c       enddo
-
       do i=1,3
         do j=1,nclu
           xx0(i,j)=xx0(i,j)/autoang
         enddo
       enddo
-
-c      do j=1,nclu
-c        print *, xx0(:,j)
-c      enddo
-
-
 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
@@ -312,7 +304,7 @@ c     procedure is determined based on user input
       write(6,*)jobtype
       if (jobtype.eq."HESSC") then
         write(6,*)"Calculating Hessians..."
-        hh = 0.001d0
+        hh = 0.01
         do i=1,3
         do j=1,nclu
           write(6,'(4(a,i5))')" step (",i,",",j,") of ( 3,",nclu,")"
@@ -364,56 +356,35 @@ c           mass-scale
         enddo
       elseif (jobtype.eq."HESSR") then
         write(6,*) "Now reading the Hessians"      
-        open(30, file='hess.1')
-        do i=1,3*nclu
-          do j=1,3*nclu
-            read(30, *) hessa(i,j)
+        open(30, file="hess.1")
+        do i=1,3
+          do j=1,nclu
+            do k=1,3
+              do l=1,nclu
+                ij = nclu*(j-1)+i
+                kl = nclu*(l-1)+k
+                read(30,*) hessval
+                mwhessa(ij,kl)=hessval*mu/dsqrt(mm(i)*mm(k))
+              enddo
+            enddo
           enddo
         enddo
-c        do i=1,nclu
-c          do j=1,3
-c            do k=1,nclu
-c              do l=1,3
-c                ij=i*j
-c                kl=k*l
-c                read(30,*) hessval
-c                hessa(ij,kl)=hessval*mu/dsqrt(mm(i)*mm(k))
-c              enddo
-c            enddo
-c          enddo
-c        enddo
-        open(31, file='hess.3')
-        do i=1,3*nclu
-          do j=1,3*nclu
-            read(31, *) hessb(i,j)
+        open(31, file="hess.3")
+        do i=1,3
+          do j=1,nclu
+            do k=1,3
+              do l=1,nclu
+                ij=i*j
+                kl=k*l
+                ij = nclu*(j-1)+i
+                kl = nclu*(l-1)+k
+                read(31,*) hessval
+                mwhessb(ij,kl)=hessval*mu/dsqrt(mm(i)*mm(k))
+              enddo
+            enddo
           enddo
         enddo
-c        do i=1,nclu
-c          do j=1,3
-c            do k=1,nclu
-c              do l=1,3
-c                ij=i*j
-c                kl=k*l
-c                read(31,*) hessval
-c                hessb(ij,kl)=hessval*mu/dsqrt(mm(i)*mm(k))
-c              enddo
-c            enddo
-c          enddo
-c        enddo
       endif
-
-      write(6,*) "Printing out the Hessians"
-      write(6,*)
-      write(6,*) "Hess 1"
-      do i=1,3*nclu
-        print *, hessa(i,:)
-      enddo
-      write(6,*)
-      write(6,*)
-      write(6,*) "Hess 3"
-      do i=1,3*nclu
-        print *, hessb(i,:)
-      enddo
 
       write(6,*)
 
@@ -576,7 +547,6 @@ c     Calculate the Hessians used to determine the state counts
 c     calculate the effective two-state Hessian from paper      
 c      write (6,*)"Effective two-state grad(E1-E2)-projected"
 
-c     calculate the effective two-state Hessian from paper      
 c      ndim = 3*nclu
 c      nmax = 3*nclu
 c      do i=1,ndim
@@ -608,7 +578,7 @@ c     simply average the two elements of each Hessain
       nmax = 3*nclu
       do i=1,ndim
         do j=1,ndim
-         hessax(i,j)=(hessb(i,j)+hessa(i,j))/2.d0
+         hessax(i,j)=(mwhessb(i,j)+mwhessa(i,j))/2.d0
         enddo
       enddo
 
@@ -630,7 +600,7 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 c     Calculate cuts along each normal mode if requested
 
-      IF(.false.)THEN
+      if (icut.eqv..true.) then
       do im=0,ndim
         if (im.gt.0) print *,"mode=",im,dsqrt(dabs(freq(k))/mu)*autocmi
         if (im.eq.0) print *,"gradient"

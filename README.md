@@ -1,17 +1,17 @@
-#NST: A simple minimum-on-the-seam-of-crossings (MSX) optimizer and nonadiabatic statistical theory (NST) flux calculator
+# NST: A simple minimum-on-the-seam-of-crossings (MSX) optimizer and nonadiabatic statistical theory (NST) flux calculator
 
-##Authors
+## Authors
 Ahren W. Jasper, Mark Pfeifle and Stephen J. Klippenstein  
 
-##Functionality
+## Functionality
 (1) refine the geometry of a good MSX (often called MECP) guess,  
 (2) compute Landau-Zener NST (often called NA TST) rates, and  
 (3) generate the requisite data files for use in MESS and VariFlex.
 
-##Preferred Citation
+## Preferred Citation
 NEED
 
-##References
+## References
 MSX optimization strategy:  
 M. J. Bearpark, M. A. Robb, and H. B. Schlegel, Chem. Phys. Lett. 223, 269 (1994).
 
@@ -28,6 +28,6 @@ A. W. Jasper, J. Phys. Chem. A 119, 7339 (2015).
 Refined expression for curve-crossing probability (Airy formula) from  
 J. B. Delos, J. Chem. Phys. 59, 2365 (1973).
 
-##Contact
+## Contact
 Ahren Jasper [ajasper@anl.gov]
 
