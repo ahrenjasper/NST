@@ -71,7 +71,7 @@ c     gradients variables
       double precision gv1b(3,nclu),gv2b(3,nclu)
       double precision gperp1(3*nclu),gperp2(3*nclu),gperp3(3*nclu)
       double precision hh
-      double precision g1(3,nclu),g2(3,nclu)
+      double precision :: gdot = 0.0
 
 c     Hessian variables
       integer nmax,ndim
@@ -294,6 +294,13 @@ c     gradient of the gap
       enddo
       write(6,*)
 
+c     calculate the dot products
+      do i=1,3
+        do j=1,nclu
+          gdot = gdot + gpemd(i,j,n1,n1) * gpemd(i,j,n2,n2) 
+        enddo
+      enddo
+
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 c       Obtain the Hessians
@@ -423,7 +430,7 @@ c       calc freqs
         enddo
         enddo
         call proj(symb,xx0,mm,mu,nclu,nsurf,el_zero,gperp1,hessax)
-        call dsyev( 'v','u',ndim,hessax,nmax,freq,work,lwork,info)
+        call dsyev('v','u',ndim,hessax,nmax,freq,work,lwork,info)
         write(6,*)"  Index  Force Const(mass-scaled Eh/a0^2) Freq(cm-1)"
         do k=1,ndim
           if (freq(k).gt.0.d0) then
@@ -443,7 +450,7 @@ c       calc freqs
         hessax(i,j)=mwhessb(i,j)
         enddo
         enddo
-        call dsyev( 'v','u',ndim,hessax,nmax,freq,work,lwork,info)
+        call dsyev('v','u',ndim,hessax,nmax,freq,work,lwork,info)
         write(6,*)"  Index  Force Const(mass-scaled Eh/a0^2) Freq(cm-1)"
         do k=1,ndim
           if (freq(k).gt.0.d0) then
@@ -544,36 +551,40 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 c     Calculate the Hessians used to determine the state counts
 
-c     calculate the effective two-state Hessian from paper      
-c      write (6,*)"Effective two-state grad(E1-E2)-projected"
+      write (6,*)"Effective two-state grad(E1-E2)-projected"
+      write (6,*)
+      write (6,*)
 
-c      ndim = 3*nclu
-c      nmax = 3*nclu
-c      do i=1,ndim
-c      do j=1,ndim
-c        if (g1*g2.gt.0.0) then
-c        hessax(i,j)=((tmp1*hessa(i,j)+tmp2*hessb(i,j))/(abs(tmp1+tmp2)))
-c        if (g1*g2.lt.0.0) then
-c        hessax(i,j)=((tmp1*hessa(i,j)-tmp2*hessb(i,j))/(abs(tmp1-tmp2)))
-c      endif
-c      enddo
-c      enddo
-c      call proj(symb,xx0,mm,mu,nclu,nsurf,el_zero,gperp3,hessax)
-c      call dsyev( 'v','u',ndim,hessax,nmax,freq,work,lwork,info)
-c
-c      write(6,*)"   Index  Force Const (mass-scaled Eh/a0^2) Freq(cm-1)"
-c      do k=1,ndim
-c        if (freq(k).gt.0.d0) then
-c            tmp=dsqrt(freq(k)/mu)
-c        else
-c            tmp=-dsqrt(-freq(k)/mu)
-c        endif
-c        write(6,150)k,freq(k),tmp*autocmi
-c      enddo
-c      write(6,*)
+
+c     calculate the effective two-state Hessian from paper      
+      write(6,*)"Effective Hessian from Harvey"
+      ndim = 3*nclu
+      nmax = 3*nclu
+      do i=1,ndim
+      do j=1,ndim
+      if (gdot.gt.0.0) then
+        hessax(i,j)=((tmp2*mwhessa(i,j)+tmp1*mwhessb(i,j))/(abs(tmp3)))
+      elseif (gdot.lt.0.0) then
+        hessax(i,j)=((tmp2*mwhessa(i,j)-tmp1*mwhessb(i,j))/(abs(tmp3)))
+      endif
+      enddo
+      enddo
+      call proj(symb,xx0,mm,mu,nclu,nsurf,el_zero,gperp3,hessax)
+      call dsyev('v','u',ndim,hessax,nmax,freq,work,lwork,info)
+
+      write(6,*)"   Index  Force Const (mass-scaled Eh/a0^2) Freq(cm-1)"
+      do k=1,ndim
+        if (freq(k).gt.0.d0) then
+            tmp=dsqrt(freq(k)/mu)
+        else
+            tmp=-dsqrt(-freq(k)/mu)
+        endif
+        write(6,150)k,freq(k),tmp*autocmi
+      enddo
+      write(6,*)
 
 c     simply average the two elements of each Hessain     
-      write (6,*)"Two-state averaged Hessian"
+      write (6,*)"Simple Average of Hessian Elements of Two States"
       ndim = 3*nclu
       nmax = 3*nclu
       do i=1,ndim
