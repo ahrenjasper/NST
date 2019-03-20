@@ -15,9 +15,9 @@ nn(2)=2
 nn(3)=3                                                                         
                                                                                 
 basis=cc-pVDZ                                                                   
-{hf,maxit=1000                                                                  
-  wf,20,1,0,0}                                                                  
-{mp2}                                                                           
+{uhf,maxit=1000                                                                 
+  wf,20,1,2,0}                                                                  
+{ump2}                                                                          
 molpro_energy=energy(1)                                                         
 force                                                                           
 varsav                                                                          

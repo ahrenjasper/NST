@@ -29,8 +29,9 @@ ARRAY_BLOCKS_PATTERN = app.series(ARRAY_BLOCK_PATTERN, app.NEWLINE)
 def hessian(output_string):
     """ get hessian from output
     """
-    head_pattern = app.escape('Force Constants (Second Derivatives of '
-                              'the Energy) in [a.u.]')
+    #head_pattern = app.escape('Force Constants (Second Derivatives of '
+    #                          'the Energy) in [a.u.]')
+    head_pattern = app.escape('Mass weighted Second Derivative Matrix')
     block_pattern = head_pattern + app.NEWLINE + ARRAY_BLOCKS_PATTERN
     array_str = apf.last_capture(app.capturing(block_pattern), output_string)
     block_strs = apf.all_captures(app.capturing(ARRAY_BLOCK_BODY_PATTERN),
@@ -66,6 +67,7 @@ def _values_from_molpro_tril_block(block_str):
 if __name__ == '__main__':
     OUTPUT_STRING = open('output.dat').read()
     HESS = hessian(OUTPUT_STRING)
+    print(numpy.array(HESS))
     with open('hess.n', 'w') as hessfile:
         for x in HESS:
             for y in x:

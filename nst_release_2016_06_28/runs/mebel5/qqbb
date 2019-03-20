@@ -1,0 +1,53 @@
+#!/bin/bash
+
+nodename=$1
+if [ "$1" = "" ]; then
+cat << EOFUSE
+Usage: qq nodename "command" [walltime (default: 10:00:00)] [nodes (default: 1)]
+nodename = q | queue for the blues queue using PBS and qsub
+This code creates an executable file (nodename.x) and submits it via qsub.
+"command" can be an executable file with multiple jobs in it.
+Processors per node is always set to 36 when submitting to the bdwall queue.
+EOFUSE
+exit
+fi
+
+job=$2
+
+if [ "$3" = "" ]; then
+wall="20:00:00"
+else
+wall="$3"
+fi
+
+if [ "$4" = "" ]; then
+nodes="1"
+else
+nodes="$4"
+fi
+
+cwd=`pwd`
+
+if  [ "$nodename" = "queue" ] || [ "$nodename" = "q" ]; then
+cat << EOF > ${nodename}.x
+#!/bin/sh
+#
+#SBATCH --job-name=job
+#SBATCH -N $nodes
+#SBATCH --ntasks-per-node=36
+#SBATCH -p knld
+#SBATCH --time=$wall
+#SBATCH -A KTP
+#SBATCH -o job.%j.%N.out
+source ~/.bash_profile
+mkdir -p /scratch/$USER
+cd \$SLURM_SUBMIT_DIR
+LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/ajasper/lib/
+export LD_LIBRARY_PATH
+module load molpro
+$job
+EOF
+chmod u+x ${nodename}.x
+sbatch ${nodename}.x
+
+fi

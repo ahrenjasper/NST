@@ -66,11 +66,6 @@ c Reads the Input File for the Job Information
 c     get the jobtype
       read(5,*)
       read(5,*) jobtype
-c      if (jobtype.ne."OPTGM".or.jobtype.ne."ROTGM".or.
-c    &    jobtype.ne."HESSR".or.jobtype.ne."HESSC")  then
-c        print *, "Jobtype must me OPTG, ROTG, HESSR, or HESSC"
-c        stop
-c      endif
 c     get the number of atoms
       read(5,*)
       read(5,*) nclu
@@ -105,9 +100,6 @@ c     get so-coupling
 c     get scale factor for elec part'n fxn
       read(5,*)
       read(5,*) sc_qelec
-c     get logical variable for setting debugging
-      read(5,*)
-      read(5,*) idebug
 c     get logical variable for normal mode cuts 
       read(5,*)
       read(5,*) icut
@@ -118,40 +110,44 @@ cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 c     Calls Appropriate Subroutine based on Job Type
 
       if (jobtype.eq."OPTGM") then
-        write(6,*) "Request to optimize geometry"
-        write(6,*) 
+        write(6,*) "-------------------------------"
+        write(6,*) "Request to Optimize MSX Geometry"
+        write(6,*) "-------------------------------"
         write(6,*) 
         call opt(symb,x,y,z,nclu,mnat,mnsurf,el_zero,barbor) 
       end if
       
       if (jobtype.eq."ROTGM") then
-        write(6,*) "Request to rotate geometry to principal axes"
+        write(6,*) "------------------------------------------------"
+        write(6,*) "Request to Rotate MSX Geometry to Principal Axes"
+        write(6,*) "------------------------------------------------"
         write(6,*) 
-        write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
 
       if (jobtype.eq."HESSR") then
-        write(6,*) "Request to read Hessians for frequency calc"
+        write(6,*) "-------------------------------------------------"
+        write(6,*) "Request to Calculate MSX Freqs By Read'g Hessians"
+        write(6,*) "-------------------------------------------------"
         write(6,*) 
-        write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
       
       if (jobtype.eq."HESSC") then
-        write(6,*) "Request to calc Hessians for frequency calc"
+        write(6,*) "---------------------------------------------------"
+        write(6,*) "Request to Determine MSX Freqs By Calc'ing Hessians"
+        write(6,*) "---------------------------------------------------"
         write(6,*) 
-        write(6,*) 
-        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,idebug,icut,
+        call msxfreq(xx,mm,nclu,symb,el_zero,jobtype,icut,
      &               es,emax,js,jmax,hso12,sc_qelec)
       end if
 
 cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
 
 c     Exits the Program with Happy Message
-      print *,"Well done!"
+      write(6, *) "Exiting Program..."
 
       end
 

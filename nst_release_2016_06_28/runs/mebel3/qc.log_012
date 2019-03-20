@@ -1,0 +1,789 @@
+ Cartesian Coordinates are in [bohr]
+ Creating new Variables:
+ OX1               2.54384834
+ OY1               0.00377901
+ OZ1               0.00000000
+ CX2               0.23146462
+ CY2               0.00059425
+ CZ2               0.00000000
+ CX3              -1.46667391
+ CY3               2.17776546
+ CZ3               0.00000000
+ CX4              -1.45908026
+ CY4              -2.18227921
+ CZ4               0.00000000
+ HX5              -0.62723552
+ HY5               4.08090830
+ HZ5               0.00000000
+ HX6              -3.53054913
+ HY6               2.00068128
+ HZ6               0.00000000
+ HX7              -0.61074343
+ HY7              -4.08146542
+ HZ7               0.00000000
+ HX8              -3.52371043
+ HY8              -2.01343098
+ HZ8              -0.00100000
+
+ Generated  18 symmetrical displacements
+
+ Number of displacements for numerical gradient:     36
+
+ Starting task  24   Incrementing displacement 12 by -1.   CPU=    0.03 sec, Elapsed=    0.04 sec
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  O       8.00    2.546908464    0.003783593    0.000000011
+   2  C       6.00    0.234399000    0.000600730    0.000000073
+   3  C       6.00   -1.466095816    2.177039577    0.000000011
+   4  C       6.00   -1.458503273   -2.181549584    0.000002177
+   5  H       1.00   -0.625764832    4.084422524    0.000000002
+   6  H       1.00   -3.535599134    2.000373973   -0.000000003
+   7  H       1.00   -0.609256088   -4.084974668    0.000000066
+   8  H       1.00   -3.528768026   -2.013143449   -0.001002337
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.312511654  2-3  2.761986364  2-4  2.761828760  3-5  2.084290256  3-6  2.077030264
+     ( 1.223728467)     ( 1.461580241)     ( 1.461496840)     ( 1.102958904)     ( 1.099117082)
+
+ 4-7  2.084285928  4-8  2.077103219
+     ( 1.102956614)     ( 1.099155688)
+
+ Bond angles
+
+  1-2-3  127.92235668   1-2-4  127.88300696   2-3-5  118.22205194   2-3-6  123.12192401
+
+  2-4-7  118.15095791   2-4-8  123.15364444   3-2-4  104.19463636   5-3-6  118.65602406
+
+  7-4-8  118.69538955
+
+ NUCLEAR CHARGE:                   30
+ NUMBER OF PRIMITIVE AOS:         136
+ NUMBER OF SYMMETRY AOS:          132
+ NUMBER OF CONTRACTIONS:           76   (  76A   )
+ NUMBER OF CORE ORBITALS:           4   (   4A   )
+ NUMBER OF VALENCE ORBITALS:       20   (  20A   )
+
+
+ NUCLEAR REPULSION ENERGY  104.63573438
+
+
+ Eigenvalues of metric
+
+         1 0.361E-02 0.381E-02 0.889E-02 0.154E-01 0.192E-01 0.257E-01 0.341E-01 0.364E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     15.729 MB (compressed) written to integral file ( 40.1%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    4282201.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    4282201      RECORD LENGTH: 524288
+
+ Memory used in sort:       4.84 MW
+
+ SORT1 READ     4923618. AND WROTE     3639761. INTEGRALS IN     11 RECORDS. CPU TIME:     0.28 SEC, REAL TIME:     0.33 SEC
+ SORT2 READ     3639761. AND WROTE     4282201. INTEGRALS IN     60 RECORDS. CPU TIME:     0.68 SEC, REAL TIME:     0.75 SEC
+
+ FILE SIZES:   FILE 1:    35.4 MBYTE,  FILE 4:    46.2 MBYTE,   TOTAL:     81.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      15+   15-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+ Number of closed-shell orbitals:   15 (  15 )
+
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Molecular orbital dump at record        2100.1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -190.65608544    341.994945   -2.09830   -0.00344   -0.00014    0    start
+    2      0.000D+00      0.621D-04      -190.65609013    341.981201   -2.09949   -0.00345   -0.00014    1    diag
+    3      0.221D-03      0.156D-04      -190.65609040    341.980152   -2.09738   -0.00344   -0.00014    2    diag
+    4      0.452D-04      0.810D-05      -190.65609046    341.980988   -2.09791   -0.00344   -0.00014    3    diag
+    5      0.138D-04      0.177D-05      -190.65609046    341.980335   -2.09776   -0.00344   -0.00014    4    diag
+    6      0.324D-05      0.463D-06      -190.65609046    341.980372   -2.09775   -0.00344   -0.00014    5    diag
+    7      0.121D-05      0.891D-07      -190.65609046    341.980400   -2.09775   -0.00344   -0.00014    6    diag
+    8      0.211D-06      0.235D-07      -190.65609046    341.980387   -2.09775   -0.00344   -0.00014    7    orth
+    9      0.592D-07      0.565D-08      -190.65609046    341.980389   -2.09775   -0.00344   -0.00014    0    orth
+
+ Final occupancy:  15
+
+ !RHF STATE 1.1 Energy               -190.656090459550
+ Nuclear energy                       104.63573438
+ One-electron energy                 -466.28201937
+ Two-electron energy                  170.99019453
+ Virial quotient                       -1.00199030
+ !RHF STATE 1.1 Dipole moment          -2.09774621    -0.00344264    -0.00014234
+ Dipole moment /Debye                  -5.33158982    -0.00874975    -0.00036177
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1          9.1         10.1
+    -20.466992   -11.320673   -11.320529   -11.317704    -1.326327    -1.060506    -0.935404    -0.753917    -0.663392    -0.654222
+
+        11.1         12.1         13.1         14.1         15.1         16.1         17.1
+     -0.564887    -0.559305    -0.520813    -0.382110    -0.304034    -0.014388     0.164891
+
+ HOMO     15.1    -0.304034 =      -8.2732eV
+ LUMO     16.1    -0.014388 =      -0.3915eV
+ LUMO-HOMO         0.289645 =       7.8817eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.12       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL       RHF      RMP2       RHF       INT
+ CPU TIMES  *        12.11      5.19      0.59      1.76      3.67
+ REAL TIME  *        13.08 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RMP2 (Restricted open-shell)     Authors: H.-J. Werner, 2001
+
+
+ Convergence thresholds:  THRVAR = 1.00D-12  THRDEN = 1.00D-08
+
+ Number of core orbitals:           4 (   4 )
+ Number of closed-shell orbitals:  11 (  11 )
+ Number of external orbitals:      61 (  61 )
+
+ Reading UHF information from record   2100.1
+
+                               TOTAL       A-A         B-B         A-B
+ Pair energies:            -0.59484199 -0.07477767 -0.07477767 -0.44528665
+ Singles energies:         -0.00000000 -0.00000000 -0.00000000
+
+ Reference energy                    -190.656090459551
+ Correlation energy                    -0.594841985373
+ !RMP2 STATE 1.1 Energy              -191.250932444924
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.12       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL      RMP2      RMP2       RHF       INT
+ CPU TIMES  *        12.73      0.61      0.59      1.76      3.67
+ REAL TIME  *        13.75 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+ SETTING MOLPRO_ENERGY  =      -191.25093244  AU                              
+ Starting task  26   Incrementing displacement 13 by -1.   CPU=    6.23 sec, Elapsed=    6.25 sec
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  O       8.00    2.543849630    0.004992058   -0.000000004
+   2  C       6.00    0.231473613   -0.003840459   -0.000000046
+   3  C       6.00   -1.465274180    2.175521023   -0.000000016
+   4  C       6.00   -1.460470660   -2.184529020   -0.000001571
+   5  H       1.00   -0.625586782    4.084986111    0.000000001
+   6  H       1.00   -3.534163817    2.000459443   -0.000000000
+   7  H       1.00   -0.612409343   -4.077398300   -0.000000049
+   8  H       1.00   -3.520098167   -2.013638161   -0.000998315
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.312392885  2-3  2.761986521  2-4  2.760086597  3-5  2.085936684  3-6  2.076282949
+     ( 1.223665618)     ( 1.461580324)     ( 1.460574927)     ( 1.103830157)     ( 1.098721620)
+
+ 4-7  2.074165401  4-8  2.066705143
+     ( 1.097601062)     ( 1.093653263)
+
+ Bond angles
+
+  1-2-3  127.68378819   1-2-4  128.02588403   2-3-5  118.35986589   2-3-6  123.06600833
+
+  2-4-7  118.05917770   2-4-8  123.06396407   3-2-4  104.29032778   5-3-6  118.57412578
+
+  7-4-8  118.87685026
+
+ NUCLEAR CHARGE:                   30
+ NUMBER OF PRIMITIVE AOS:         136
+ NUMBER OF SYMMETRY AOS:          132
+ NUMBER OF CONTRACTIONS:           76   (  76A   )
+ NUMBER OF CORE ORBITALS:           4   (   4A   )
+ NUMBER OF VALENCE ORBITALS:       20   (  20A   )
+
+
+ NUCLEAR REPULSION ENERGY  104.69365931
+
+
+ Eigenvalues of metric
+
+         1 0.360E-02 0.380E-02 0.888E-02 0.153E-01 0.192E-01 0.256E-01 0.338E-01 0.361E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     15.729 MB (compressed) written to integral file ( 39.8%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    4282201.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    4282201      RECORD LENGTH: 524288
+
+ Memory used in sort:       4.84 MW
+
+ SORT1 READ     4923780. AND WROTE     3617954. INTEGRALS IN     11 RECORDS. CPU TIME:     0.27 SEC, REAL TIME:     0.33 SEC
+ SORT2 READ     3617954. AND WROTE     4282201. INTEGRALS IN     60 RECORDS. CPU TIME:     0.68 SEC, REAL TIME:     0.74 SEC
+
+ FILE SIZES:   FILE 1:    35.4 MBYTE,  FILE 4:    46.2 MBYTE,   TOTAL:     81.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      15+   15-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+ Number of closed-shell orbitals:   15 (  15 )
+
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Molecular orbital dump at record        2100.1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -190.65639681    342.089163   -2.09772   -0.00500   -0.00014    0    start
+    2      0.000D+00      0.875D-04      -190.65640581    342.089148   -2.09771    0.00489   -0.00014    1    diag
+    3      0.264D-03      0.364D-04      -190.65640682    342.089203   -2.09772   -0.00302   -0.00014    2    diag
+    4      0.862D-04      0.202D-04      -190.65640738    342.089163   -2.09772    0.00094   -0.00014    3    diag
+    5      0.366D-04      0.471D-05      -190.65640743    342.089170   -2.09772    0.00119   -0.00014    4    diag
+    6      0.116D-04      0.222D-05      -190.65640744    342.089170   -2.09772    0.00156   -0.00014    5    diag
+    7      0.709D-05      0.102D-05      -190.65640744    342.089172   -2.09772    0.00188   -0.00014    6    diag
+    8      0.515D-05      0.204D-06      -190.65640744    342.089173   -2.09772    0.00197   -0.00014    7    orth
+    9      0.124D-05      0.278D-07      -190.65640744    342.089172   -2.09772    0.00197   -0.00014    8    diag
+   10      0.132D-06      0.841D-08      -190.65640744    342.089172   -2.09772    0.00198   -0.00014    9    diag
+   11      0.208D-07      0.254D-08      -190.65640744    342.089172   -2.09772    0.00198   -0.00014    0    orth
+
+ Final occupancy:  15
+
+ !RHF STATE 1.1 Energy               -190.656407444248
+ Nuclear energy                       104.69365931
+ One-electron energy                 -466.39465296
+ Two-electron energy                  171.04458620
+ Virial quotient                       -1.00190201
+ !RHF STATE 1.1 Dipole moment          -2.09771856     0.00197530    -0.00014146
+ Dipole moment /Debye                  -5.33151955     0.00502038    -0.00035954
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1          9.1         10.1
+    -20.466706   -11.320958   -11.319222   -11.317374    -1.326230    -1.060851    -0.936252    -0.754435    -0.664249    -0.654859
+
+        11.1         12.1         13.1         14.1         15.1         16.1         17.1
+     -0.564774    -0.560160    -0.520757    -0.381986    -0.303929    -0.014490     0.165327
+
+ HOMO     15.1    -0.303929 =      -8.2703eV
+ LUMO     16.1    -0.014490 =      -0.3943eV
+ LUMO-HOMO         0.289439 =       7.8760eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.05       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL       RHF      RMP2       RHF       INT
+ CPU TIMES  *        18.23      5.48      0.59      1.76      3.67
+ REAL TIME  *        19.53 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RMP2 (Restricted open-shell)     Authors: H.-J. Werner, 2001
+
+
+ Convergence thresholds:  THRVAR = 1.00D-12  THRDEN = 1.00D-08
+
+ Number of core orbitals:           4 (   4 )
+ Number of closed-shell orbitals:  11 (  11 )
+ Number of external orbitals:      61 (  61 )
+
+ Reading UHF information from record   2100.1
+
+                               TOTAL       A-A         B-B         A-B
+ Pair energies:            -0.59457793 -0.07475026 -0.07475026 -0.44507742
+ Singles energies:         -0.00000000 -0.00000000 -0.00000000
+
+ Reference energy                    -190.656407444248
+ Correlation energy                    -0.594577930960
+ !RMP2 STATE 1.1 Energy              -191.250985375208
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.05       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL      RMP2      RMP2       RHF       INT
+ CPU TIMES  *        18.85      0.61      0.59      1.76      3.67
+ REAL TIME  *        20.20 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+ SETTING MOLPRO_ENERGY  =      -191.25098538  AU                              
+ Starting task  28   Incrementing displacement 14 by -1.   CPU=   12.69 sec, Elapsed=   12.71 sec
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  O       8.00    2.543851041    0.003026377    0.000000002
+   2  C       6.00    0.231464831    0.001530071    0.000000015
+   3  C       6.00   -1.471239810    2.174636182   -0.000000012
+   4  C       6.00   -1.454513069   -2.185385968    0.000001479
+   5  H       1.00   -0.626069540    4.083671662    0.000000001
+   6  H       1.00   -3.527439453    2.000955391    0.000000000
+   7  H       1.00   -0.611920718   -4.078711199    0.000000001
+   8  H       1.00   -3.526812989   -2.013169821   -0.001001486
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.312386694  2-3  2.760723324  2-4  2.761362569  3-5  2.087756989  3-6  2.063521745
+     ( 1.223662341)     ( 1.460911869)     ( 1.461250143)     ( 1.104793421)     ( 1.091968681)
+
+ 4-7  2.072351877  4-8  2.079443763
+     ( 1.096641386)     ( 1.100394251)
+
+ Bond angles
+
+  1-2-3  128.04286587   1-2-4  127.66709046   2-3-5  118.04007646   2-3-6  123.25180522
+
+  2-4-7  118.37933881   2-4-8  122.87942608   3-2-4  104.29004367   5-3-6  118.70811832
+
+  7-4-8  118.74122711
+
+ NUCLEAR CHARGE:                   30
+ NUMBER OF PRIMITIVE AOS:         136
+ NUMBER OF SYMMETRY AOS:          132
+ NUMBER OF CONTRACTIONS:           76   (  76A   )
+ NUMBER OF CORE ORBITALS:           4   (   4A   )
+ NUMBER OF VALENCE ORBITALS:       20   (  20A   )
+
+
+ NUCLEAR REPULSION ENERGY  104.69374759
+
+
+ Eigenvalues of metric
+
+         1 0.360E-02 0.380E-02 0.888E-02 0.153E-01 0.192E-01 0.256E-01 0.338E-01 0.362E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     15.729 MB (compressed) written to integral file ( 39.5%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    4282201.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    4282201      RECORD LENGTH: 524288
+
+ Memory used in sort:       4.84 MW
+
+ SORT1 READ     4923780. AND WROTE     3584231. INTEGRALS IN     11 RECORDS. CPU TIME:     0.28 SEC, REAL TIME:     0.33 SEC
+ SORT2 READ     3584231. AND WROTE     4282201. INTEGRALS IN     60 RECORDS. CPU TIME:     0.68 SEC, REAL TIME:     0.73 SEC
+
+ FILE SIZES:   FILE 1:    35.4 MBYTE,  FILE 4:    46.2 MBYTE,   TOTAL:     81.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      15+   15-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+ Number of closed-shell orbitals:   15 (  15 )
+
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Molecular orbital dump at record        2100.1
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -190.65636752    342.089177   -2.09771   -0.00233   -0.00014    0    start
+    2      0.000D+00      0.981D-04      -190.65638086    342.089205   -2.09767   -0.00594   -0.00014    1    diag
+    3      0.368D-03      0.246D-04      -190.65638198    342.089186   -2.09769   -0.00674   -0.00014    2    diag
+    4      0.867D-04      0.708D-05      -190.65638207    342.089150   -2.09766   -0.00920   -0.00014    3    diag
+    5      0.214D-04      0.565D-05      -190.65638210    342.089161   -2.09766   -0.00890   -0.00014    4    diag
+    6      0.985D-05      0.127D-05      -190.65638211    342.089161   -2.09766   -0.00923   -0.00014    5    diag
+    7      0.440D-05      0.798D-06      -190.65638211    342.089158   -2.09766   -0.00942   -0.00014    6    diag
+    8      0.308D-05      0.309D-06      -190.65638211    342.089165   -2.09766   -0.00952   -0.00014    7    orth
+    9      0.173D-05      0.406D-07      -190.65638211    342.089158   -2.09766   -0.00953   -0.00014    8    diag
+   10      0.207D-06      0.112D-07      -190.65638211    342.089161   -2.09766   -0.00953   -0.00014    9    diag
+   11      0.346D-07      0.273D-08      -190.65638211    342.089161   -2.09766   -0.00953   -0.00014    0    orth
+
+ Final occupancy:  15
+
+ !RHF STATE 1.1 Energy               -190.656382110905
+ Nuclear energy                       104.69374759
+ One-electron energy                 -466.39471008
+ Two-electron energy                  171.04458038
+ Virial quotient                       -1.00190151
+ !RHF STATE 1.1 Dipole moment          -2.09766355    -0.00953317    -0.00014151
+ Dipole moment /Debye                  -5.33137974    -0.02422933    -0.00035966
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1          9.1         10.1
+    -20.466708   -11.320337   -11.319831   -11.317392    -1.326234    -1.060850    -0.936264    -0.754461    -0.664243    -0.654857
+
+        11.1         12.1         13.1         14.1         15.1         16.1         17.1
+     -0.564767    -0.560155    -0.520759    -0.381987    -0.303929    -0.014491     0.165327
+
+ HOMO     15.1    -0.303929 =      -8.2703eV
+ LUMO     16.1    -0.014491 =      -0.3943eV
+ LUMO-HOMO         0.289438 =       7.8760eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.00       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL       RHF      RMP2       RHF       INT
+ CPU TIMES  *        24.35      5.49      0.59      1.76      3.67
+ REAL TIME  *        25.98 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RMP2 (Restricted open-shell)     Authors: H.-J. Werner, 2001
+
+
+ Convergence thresholds:  THRVAR = 1.00D-12  THRDEN = 1.00D-08
+
+ Number of core orbitals:           4 (   4 )
+ Number of closed-shell orbitals:  11 (  11 )
+ Number of external orbitals:      61 (  61 )
+
+ Reading UHF information from record   2100.1
+
+                               TOTAL       A-A         B-B         A-B
+ Pair energies:            -0.59457885 -0.07475030 -0.07475030 -0.44507826
+ Singles energies:         -0.00000000 -0.00000000 -0.00000000
+
+ Reference energy                    -190.656382110905
+ Correlation energy                    -0.594578847866
+ !RMP2 STATE 1.1 Energy              -191.250960958771
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       35.00       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2100   
+                                          RHF  
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL      RMP2      RMP2       RHF       INT
+ CPU TIMES  *        24.98      0.61      0.59      1.76      3.67
+ REAL TIME  *        26.66 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+ SETTING MOLPRO_ENERGY  =      -191.25096096  AU                              
+
+ Tasks on processor   12 finished.  CPU=     19.15 sec, Elapsed=     19.16 sec. Waiting for other processors...
+ Tasks on  13 processors finished.  CPU=    254.07 sec, Elapsed=     19.55 sec
+
+ Recomputing wavefunction at initial geometry
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  O       8.00    2.543848344    0.003779007    0.000000000
+   2  C       6.00    0.231464619    0.000594253    0.000000000
+   3  C       6.00   -1.466673911    2.177765463    0.000000000
+   4  C       6.00   -1.459080259   -2.182279208    0.000000000
+   5  H       1.00   -0.627235517    4.080908299    0.000000000
+   6  H       1.00   -3.530549131    2.000681277    0.000000000
+   7  H       1.00   -0.610743425   -4.081465421    0.000000000
+   8  H       1.00   -3.523710425   -2.013430976   -0.001000000
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.312385918  2-3  2.761113715  2-4  2.760956090  3-5  2.080050353  3-6  2.071458359
+     ( 1.223661931)     ( 1.461118455)     ( 1.461035043)     ( 1.100715245)     ( 1.096168557)
+
+ 4-7  2.080044148  4-8  2.071523219
+     ( 1.100711961)     ( 1.096202879)
+
+ Bond angles
+
+  1-2-3  127.87441959   1-2-4  127.83520645   2-3-5  118.24534888   2-3-6  123.04926132
+
+  2-4-7  118.17413486   2-4-8  123.08096966   3-2-4  104.29037396   5-3-6  118.70538980
+
+  7-4-8  118.74488747
+
+ NUCLEAR CHARGE:                   30
+ NUMBER OF PRIMITIVE AOS:         136
+ NUMBER OF SYMMETRY AOS:          132
+ NUMBER OF CONTRACTIONS:           76   (  76A   )
+ NUMBER OF CORE ORBITALS:           4   (   4A   )
+ NUMBER OF VALENCE ORBITALS:       20   (  20A   )
+
+
+ NUCLEAR REPULSION ENERGY  104.69367455
+
+
+ Eigenvalues of metric
+
+         1 0.361E-02 0.380E-02 0.888E-02 0.153E-01 0.192E-01 0.256E-01 0.338E-01 0.362E-01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     13.369 MB (compressed) written to integral file ( 34.3%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:    4282201.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:    4282201      RECORD LENGTH: 524288
+
+ Memory used in sort:       4.84 MW
+
+ SORT1 READ     4923780. AND WROTE     2654527. INTEGRALS IN      8 RECORDS. CPU TIME:     0.25 SEC, REAL TIME:     0.29 SEC
+ SORT2 READ     2654527. AND WROTE     4282201. INTEGRALS IN     51 RECORDS. CPU TIME:     0.64 SEC, REAL TIME:     0.70 SEC
+
+ FILE SIZES:   FILE 1:    33.1 MBYTE,  FILE 4:    33.6 MBYTE,   TOTAL:     66.7 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       30.99       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL       INT      RMP2       RHF       INT
+ CPU TIMES  *        28.95     22.15      0.59      1.76      3.67
+ REAL TIME  *        30.97 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RHF-SCF (CLOSED SHELL)       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:      15+   15-    SPACE SYMMETRY=1    SPIN SYMMETRY: Singlet 
+ CONVERGENCE THRESHOLDS:    1.00E-06 (Density)    1.00E-07 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.00 (CLOSED)  0.00 (OPEN) 
+
+
+
+ Molecular orbitals read from record     2100.2  Type=RHF/CANONICAL (state 1.1)
+
+ Molecular orbital dump at record        2100.2
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS   ORB.
+    1      0.000D+00      0.000D+00      -190.65643154    342.089273   -2.09772   -0.00344   -0.00014    0    start
+    2      0.000D+00      0.427D-07      -190.65643154    342.089263   -2.09772   -0.00344   -0.00014    0    orth
+
+ Final occupancy:  15
+
+ !RHF STATE 1.1 Energy               -190.656431536279
+ Nuclear energy                       104.69367455
+ One-electron energy                 -466.39473743
+ Two-electron energy                  171.04463135
+ Virial quotient                       -1.00190238
+ !RHF STATE 1.1 Dipole moment          -2.09771552    -0.00344405    -0.00014166
+ Dipole moment /Debye                  -5.33151181    -0.00875334    -0.00036004
+
+ Orbital energies:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1          8.1          9.1         10.1
+    -20.466705   -11.320159   -11.320005   -11.317389    -1.326231    -1.060847    -0.936252    -0.754436    -0.664203    -0.654898
+
+        11.1         12.1         13.1         14.1         15.1         16.1         17.1
+     -0.564768    -0.560173    -0.520757    -0.381986    -0.303928    -0.014490     0.165332
+
+ HOMO     15.1    -0.303928 =      -8.2703eV
+ LUMO     16.1    -0.014490 =      -0.3943eV
+ LUMO-HOMO         0.289438 =       7.8760eV
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       30.99       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL       RHF       INT      RMP2       RHF       INT
+ CPU TIMES  *        29.27      0.31     22.15      0.59      1.76      3.67
+ REAL TIME  *        31.31 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+
+
+ PROGRAM * RMP2 (Restricted open-shell)     Authors: H.-J. Werner, 2001
+
+
+ Convergence thresholds:  THRVAR = 1.00D-12  THRDEN = 1.00D-08
+
+ Number of core orbitals:           4 (   4 )
+ Number of closed-shell orbitals:  11 (  11 )
+ Number of external orbitals:      61 (  61 )
+
+ Reading UHF information from record   2100.2
+
+                               TOTAL       A-A         B-B         A-B
+ Pair energies:            -0.59457762 -0.07475017 -0.07475017 -0.44507729
+ Singles energies:         -0.00000000 -0.00000000 -0.00000000
+
+ Reference energy                    -190.656431536279
+ Correlation energy                    -0.594577624020
+ !RMP2 STATE 1.1 Energy              -191.251009160298
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      20       30.99       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       6        3.42       700     1000      520     2100      701     5600   
+                                         GEOM     BASIS   MCVARS     RHF     GEOM     GINFO   
+
+ PROGRAMS   *        TOTAL      RMP2       RHF       INT      RMP2       RHF       INT
+ CPU TIMES  *        29.88      0.61      0.31     22.15      0.59      1.76      3.67
+ REAL TIME  *        31.97 SEC
+ DISK USED  *        85.08 MB      
+ **********************************************************************************************************************************
+ SETTING MOLPRO_ENERGY  =      -191.25100916  AU                              
