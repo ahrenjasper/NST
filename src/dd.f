@@ -48,8 +48,8 @@ c           = 2 for Molpro 2006
       np(1) = 2
       ns(2) = 1
       np(2) = 2
-      tname(1) = "qc.3"
-      tname(2) = "qc.1" 
+      tname(1) = "qc.1"
+      tname(2) = "qc.2" 
 c -------------------
 
       if (nc.gt.mnc) then
