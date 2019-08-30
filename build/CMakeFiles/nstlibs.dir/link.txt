@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnstlibs.a  CMakeFiles/nstlibs.dir/src/msxfreq.f.o CMakeFiles/nstlibs.dir/src/opt.f.o CMakeFiles/nstlibs.dir/src/proj.f.o CMakeFiles/nstlibs.dir/src/dd.f.o CMakeFiles/nstlibs.dir/src/airy.f.o
+/usr/bin/ranlib libnstlibs.a

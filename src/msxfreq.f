@@ -184,7 +184,7 @@ c     diagonalize the mom matrix
           ap(i+(j-1)*j/2)=mom(i,j)
         enddo
       enddo
-      call dspev('v','u',3,ap,eig,rot,3,work2,info)
+      call dsyev('v','u',3,ap,eig,rot,3,work2,info)
 
       do i=1,3
       momi(i)=0.5d0/eig(i)
